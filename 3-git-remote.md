@@ -1,5 +1,5 @@
 
-# Work with remote repository (GitLab)
+# Work with the remote repository (GitLab)
 
 ## 1. Setup SSH 
 - Learn more about [Use SSH keys to communicate with GitLab](https://docs.gitlab.com/ee/user/ssh.html)
@@ -13,7 +13,7 @@ GitLab docs: [Clone a repository](https://docs.gitlab.com/ee/gitlab-basics/start
 1. Authenticate with GitLab by following the instructions in the SSH documentation.
 2. Go to your project’s landing page and select Clone. Copy the URL for Clone with SSH.
 3. Open a terminal and go to the directory where you want to clone the files. 
-4. Copy this REPO_URL (for SSH) and clone the repo
+4. Copy this repo gGit SSH url (REPO_URL) and clone the repo
 ```
 git clone REPO-URL
 ```
@@ -42,7 +42,7 @@ git add config.yaml && git commit -m "Add config.yaml"
 git push origin dev
 ```
 
-### 5. Create a Merge Request
-- Create a Merge Request (via GitLab UI) to `main` branch
+## 4. Create a Merge Request
+- Create a Merge Request (via GitLab UI) to the `main` branch
 - Wait... 
 - Check the test assignment report
