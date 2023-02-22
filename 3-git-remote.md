@@ -10,10 +10,8 @@
 
 GitLab docs: [Clone a repository](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html#clone-a-repository)
 
-1. Authenticate with GitLab by following the instructions in the SSH documentation.
-2. Go to your project’s landing page and select Clone. Copy the URL for Clone with SSH.
-3. Open a terminal and go to the directory where you want to clone the files. 
-4. Copy this repo gGit SSH url (REPO_URL) and clone the repo
+1. Open a terminal and go to the directory where you want to clone the files. 
+2. Copy this repo Git SSH url (REPO_URL) and clone the repo
 ```
 git clone REPO-URL
 ```
