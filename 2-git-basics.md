@@ -1,5 +1,5 @@
 
-# Get started with Git 
+# Get started with Git (local)
 
 ## 1. Install Git 
 - Follow [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
@@ -43,4 +43,3 @@ cat file.txt
 git merge dev
 cat file.txt
 ```
-
