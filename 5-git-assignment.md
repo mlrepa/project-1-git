@@ -5,7 +5,7 @@
 
 - Create a new `5-git-assignment` branch from `main` branch
 - Add a `notebooks/` directory, and set up Git to sure that no Jupyter Notebooks or other files added to `notebooks/` directory get to Git history
-- Add a `metrics` directory, and make it keep versions of all files you may put inside
+- Add a `metrics` directory, and create empty file `metrics.json`
 - Push `5-git-assignment` branch to remote repo (your mlrepa course workspace) 
 - Create Merge Request to `main` branch
 

@@ -42,7 +42,7 @@ cd demo-cli
 vim file.txt 
 ```
 
-#### 2.1 Edit files with `vim` editor
+### 2.1 Edit files with `vi/vim` editor
 
 ```markdown
 
@@ -67,9 +67,9 @@ Press `i` to switch to insert mode and add the text:
 
 ## 3. Copy, rename, move and delete files
 
+Navigate to the `demo-cli` dir
+
 ```bash
-# Navigate to the `demo-cli` dir
-cd demo-cli
 
 # Create a copy of the `file.txt` 
 cp file.txt file2.txt

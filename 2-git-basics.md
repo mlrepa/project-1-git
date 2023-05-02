@@ -2,8 +2,13 @@
 # Get started with Git (local)
 
 ## 1. Install Git 
-- Follow [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
+- follow [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- configure default initial branch name:
+
+    ```bash
+    git config --global init.defaultBranch main
+    ```
 
 ## 2. Git - Basics 
 

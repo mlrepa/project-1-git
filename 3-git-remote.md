@@ -26,7 +26,7 @@ git clone REPO-URL
 cd project-1-git
 
 # Create `dev` branch and checkout to it
-git checkout -v dev
+git checkout -b dev
 
 # Create a config file 
 touch config.yaml 

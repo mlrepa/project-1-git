@@ -22,15 +22,20 @@ git remote add myfork FORK-REPO-URL
 git fetch myfork
 git checkout dev 
 
-# (optional) Rename branch 
+# Rename branch 
 git branch -m 4-git-fork
 ```
 
 ## 4. Add `.gitignore` and `data/` directory 
 
-Add `.gitignore` (use wth VScode IDE)
-- press `CTRL + Shift + P` (`CMD + Shift + P` on macOS) to open the command palette.
-- type in `Add gitignore` in the command palette.
+Add `.gitignore`:
+- use wth VScode IDE:
+    - press `CTRL + Shift + P` (`CMD + Shift + P` on macOS) to open the command palette.
+    - type in `Add gitignore` in the command palette.
+- using CLI:
+    ```bash
+    touch .gitignore
+    ```
 
 Update code & commit 
 
@@ -42,10 +47,10 @@ mkdir data
 touch data/file.txt
 
 # Add to `.gitignore` but make it visible in the Git repo
-echo "data" >> .gitignore 
+echo "data/*" >> .gitignore 
 
 # Commit & push `4-git-fork` branch to GitLab (to user fork)
-git add .gitignore && commit -m "Add `.gitignore` and `data/` directory"
+git add .gitignore && git commit -m "Add .gitignore and data/ directory"
 git push myfork 4-git-fork
 ```
 
@@ -56,14 +61,14 @@ Expected results:
 
 ## 5. Update: make `data/` directory visible in GitLab
 ```bash
-# Create `data/.gititnore` 
-touch data/.gititnore 
+# Create `data/.gitignore` 
+touch data/.gitignore 
 
-# Add `data/.gititnore` to Git (force mode)
-git add data/.gitignore -f
+# Add `data/.gitignore` to Git
+echo '!.gitignore' >> data/.gitignore
 
 # Commit & push updates
-git add .gitignore && commit -m "Make `data/` empty but visible"
+git add .gitignore && git commit -m "Make data/ empty but visible"
 git push myfork 4-git-fork
 
 # Delete `4-git-fork` branch in the local repo
