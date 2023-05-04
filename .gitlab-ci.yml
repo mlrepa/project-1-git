@@ -1,0 +1,26 @@
+variables:
+  container_registry_repo: "school/testing"
+  image_name: "$CI_PROJECT_NAME:latest"
+
+stages:
+  - build
+
+docker-build:
+  image: docker:latest
+  rules:
+    - if: ($CI_PIPELINE_SOURCE == "push" || $CI_PIPELINE_SOURCE == "web") &&
+          $CI_COMMIT_BRANCH == "main" &&
+          $CI_PROJECT_NAMESPACE =~ /^.*mlrepa\/school\/modules.*/
+      exists:
+        - Dockerfile
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$PAT" "registry.gitlab.com"
+  script:
+    - echo "PROJECT_ROOT_NAMESPACE = $PROJECT_ROOT_NAMESPACE"
+    - export IMAGE_PATH="registry.gitlab.com/$CI_PROJECT_ROOT_NAMESPACE/$container_registry_repo/$image_name"
+    - docker build --pull -t $IMAGE_PATH .
+    - docker push $IMAGE_PATH
+  

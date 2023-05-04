@@ -11,3 +11,14 @@ Follow the tutorial instructions and table below.
 | 3-git-remote.md          | main          |
 | 4-git-fork.md            | main          |
 | 5-git-assignment.md      | main          |
+
+# CI/CD
+
+CI pipeline in [`.gitlab-ci.yml`](./.gitlab-ci.yml) builds Docker image 
+and pushes it a container registry of the project `school/testing`.
+
+To be able to login docker registry define in subgroup `school/modules` CI/CD Variable:
+
+```dotenv
+PAT=<your-gitlab-personal-access-token>
+```
