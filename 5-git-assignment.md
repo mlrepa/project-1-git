@@ -1,5 +1,5 @@
 
-# Assignment
+# Assignment: Set up Git repo for ML project
 
 ## Task
 
